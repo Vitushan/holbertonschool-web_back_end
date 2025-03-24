@@ -21,12 +21,12 @@ get name() {
 
 set name(name) {
     if (typeof name !== 'string') {
-        throw new TypeError('Name must be a qtring');
+        throw new TypeError('Name must be a string');
     }
     this._name = name;
 }
 
-get lenght() {
+get length() {
     return this._length;
 }
 
@@ -41,9 +41,9 @@ get students() {
     return this._students;
 }
 
-set Students(students) {
+set students(students) {
     if (typeof students !== 'string') {
         throw new TypeError('Students must be a string');
     }
-    this._students = students;
+    this._students = _students;
 }
