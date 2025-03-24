@@ -6,5 +6,9 @@ export default class HolbertonCourse {
         if (typeof length !== 'number') {
             throw new TypeError('age must be a number');
         }
+        if not Array.isArray(students) {
+            throw new TypeError('students must be an array of strings');
+        }
+
     }
 }
