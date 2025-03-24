@@ -1,6 +1,7 @@
 {
   "name": "holbertonschool-web_back_end",
   "version": "1.0.0",
+  "type": "module",
   "description": "read me now",
   "main": "index.js",
   "scripts": {
