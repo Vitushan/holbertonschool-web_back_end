@@ -18,7 +18,7 @@ export default class Currency {
         if (typeof code !== 'string') {
             throw new TypeError('Code must be a string');
         }
-        this.code = code;
+        this.code = _code;
     }
 
     get name() {
@@ -29,6 +29,6 @@ export default class Currency {
         if (typeof name !== 'string') {
             throw new TypeError('Name must be a string');
         }
-        this.name = name;
+        this.name = _name;
     }
 }
