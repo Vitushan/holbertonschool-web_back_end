@@ -46,5 +46,5 @@ set students(students) {
     if (!Array.isArray(students) || !students.every(student => typeof student === 'string')) {
         throw new TypeError('Students must be a string');
     }
-    this._students = _students;
+    this._students = students;
 }
