@@ -1,22 +1,18 @@
-import class Building {
-    constructor(sqft, number) {
-        if (typeof vsqft !== 'number')
-            throw new TypeError('sqft must be a numbers');
+class Building {
+    constructor(sqft) {
+        if (typeof sqft !== 'number') {
+            throw new TypeError('sqft must be a number');
+        }
+        this._sqft = sqft;
     }
 
-    this._sqft = sqft;
 
 
+    get sqft() {
+        return this._sqft;
+    }
 
-}
-
-get sqft() {
-    return this._sqft;
-}
-
-evacuationWarningMessage (){
-    set sqft(evacuationWarningMessage ) {
-        if (typeof vsqft !== 'number')
+    evacuationWarningMessage () {
             throw new TypeError('Class extending Building must override evacuationWarningMessage');
     }
 }
