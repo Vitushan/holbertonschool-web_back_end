@@ -3,6 +3,7 @@ import class Building {
         if (typeof vsqft !== 'number')
             throw new TypeError('sqft must be a numbers');
     }
+
     this._sqft = sqft;
 
 }
@@ -10,6 +11,7 @@ import class Building {
 get sqft() {
     return this._sqft;
 }
-get
+
+
 
 
