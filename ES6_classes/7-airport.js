@@ -18,8 +18,11 @@ export default class Airport {
     return this._code;
   }
 
-  [Symbol.toStringTag] = 'Airport';
-  toString() {
-    return this._code;
+  get [Symbol.toStringTag]() {
+      return this._code;
+      
+}
+toString() {
+    return `[object ${this._code}]`;
   }
 }
