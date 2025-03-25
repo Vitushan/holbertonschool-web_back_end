@@ -6,12 +6,17 @@ import class Building {
 
     this._sqft = sqft;
 
+
+
 }
 
 get sqft() {
     return this._sqft;
 }
 
-
-
-
+evacuationWarningMessage (){
+    set sqft(evacuationWarningMessage ) {
+        if (typeof vsqft !== 'number')
+            throw new TypeError('Class extending Building must override evacuationWarningMessage');
+    }
+}
