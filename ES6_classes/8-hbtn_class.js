@@ -12,10 +12,10 @@ import default class HolbertonClass {
     }
 
     valueOf () {
-        this._size = size;
+        return this._size;
     }
 
     toString() {
-        return `[object ${this._location}]`
+        return this._location;
     }
 }
