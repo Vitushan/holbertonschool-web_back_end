@@ -33,7 +33,6 @@ export class StudentHolberton {
         return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
     }
 }
-
 const student1 = new StudentHolberton("Guillaume", "Salva", class2020);
 const student2 = new StudentHolberton("John", "Doe", class2020);
 const student3 = new StudentHolberton("Albert", "Clinton", class2019);
@@ -47,5 +46,3 @@ export const listOfStudents = [
   student4,
   student5,
 ];
-
-export default listOfStudents;
