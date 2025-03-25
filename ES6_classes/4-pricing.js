@@ -39,7 +39,7 @@ export default class Pricing {
 
     static convertPrice(amount, conversionRate) {
         if (typeof amount !== 'number' || typeof conversionRate !== 'number') {
-            throw new TypeError('The amount multiplied by the conversion rate');
+            throw new TypeError('amount and conversionRate must be numbers');
         }
         return amount * conversionRate;
     }
