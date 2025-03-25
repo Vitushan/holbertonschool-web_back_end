@@ -1,5 +1,4 @@
-export default class Airport
-{
+export default class Airport {
     constructor(name, code) {
         if (typeof name !== 'string') {
             throw new TypeError('name must be a string');
@@ -11,5 +10,15 @@ export default class Airport
         }
         this._code = code;
     }
-    return ${code};
+    get name() {
+        return this._name;
+    }
+
+    get code() {
+        return this._code;
+    }
+
+    toString() {
+        return this._code;
+    }
 }
