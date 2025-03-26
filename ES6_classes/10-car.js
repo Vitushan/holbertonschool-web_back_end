@@ -13,8 +13,8 @@ export default class Car {
     this._motor = motor;
     this._color = color;
   }
+
   cloneCar() {
-    const ClonedCard = this.constructor;
-    return new ClonedCard();
+    return this [Symbol.cloneCar]();
   }
 }
