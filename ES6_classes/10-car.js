@@ -15,6 +15,6 @@ export default class Car {
   }
 
   cloneCar() {
-    return this [Symbol.cloneCar]();
+    return this [Symbol.clone]();
   }
 }
