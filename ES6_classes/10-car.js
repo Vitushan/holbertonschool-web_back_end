@@ -14,6 +14,9 @@ export default class Car {
     this._color = color;
   }
   cloneCar() {
-    return Car.map;
+    this.cloneCar = this._brand;
+    this.cloneCar = this._motor;
+    this.cloneCar = this._color;
+    return [this.cloneCar];
   }
 }
