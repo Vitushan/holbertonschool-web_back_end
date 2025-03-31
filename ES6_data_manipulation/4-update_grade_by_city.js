@@ -14,7 +14,7 @@ export default function updateStudentGradeByCity(
         (grade) => grade.studentId === student.id
       );
 
-      const grade = gradeObject ? gradeObject.grade : 'N/A';
+      const grade = gradeObject ? gradeObject.grade : "N/A";
       return { ...student, grade };
     });
 }

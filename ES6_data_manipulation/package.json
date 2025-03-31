@@ -9,7 +9,6 @@
     "dev": "nodemon server.js",
     "run-0-main": "node 0-main.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vitushan/holbertonschool-web_back_end.git"
@@ -20,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/Vitushan/holbertonschool-web_back_end/issues"
   },
-  "homepage": "https://github.com/Vitushan/holbertonschool-web_back_end#readme"
+  "homepage": "https://github.com/Vitushan/holbertonschool-web_back_end#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0"
+  }
 }
-
