@@ -7,6 +7,10 @@ export default function updateStudentGradeByCity(
     return [];
   }
 
+  if (typeof location !== 'string') {
+    return [];
+  }
+
   return students
     .filter((student) => student.location === location)
     .map((student) => {
