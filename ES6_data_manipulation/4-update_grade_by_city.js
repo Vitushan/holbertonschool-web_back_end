@@ -3,11 +3,11 @@ export default function updateStudentGradeByCity(
   location,
   newGrades
 ) {
-  if (!Array.isArray(students)) {
+  if (!Array.isArray(students) || !Array.isArray(newGrades)) {
     return [];
   }
 
-  if (typeof location !== 'string') {
+  if (typeof location !== "string") {
     return [];
   }
 
