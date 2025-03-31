@@ -1,6 +1,6 @@
-export default function setFromArray(Array) {
+export default function setFromArray(array) {
     if (!Array.isArray(array)) {
-        return [];
+        return new set();
     }
-    const unique= new Set(Array);
+    const unique= new Set(array);
 }
