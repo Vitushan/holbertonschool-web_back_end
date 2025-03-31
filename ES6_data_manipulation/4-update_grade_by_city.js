@@ -7,7 +7,7 @@ export default function updateStudentGradeByCity(
     return [];
   }
 
-  if (typeof location !== "string") {
+  if (typeof location !== 'string') {
     return [];
   }
 
