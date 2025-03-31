@@ -1,3 +1,7 @@
-import setFromArray from "./6-set.js";
+export default setFromArray(Array) {
+    if (!Array.isArray == Array) {
+        return [];
+    }
+    return Array;
 
-console.log(setFromArray([12, 32, 15, 78, 98, 15]));
+}
