@@ -1,7 +1,7 @@
-export default function updateStudentGradeByCity(getStudentIdsSum, location, newGrades) {
+export default function updateStudentGradeByCity(students, location, newGrades) {
     if (!Array.isArray(students)) {
         return [];
     }
 
-    return students
+    const filteredStudents = students.filter(student => student.location === location);
 }
