@@ -1,5 +1,4 @@
-export default function getListStudentsIds(students) {
-
+function getListStudentsIds(students) {
     if (!Array.isArray(students)) {
     return [];
   }
