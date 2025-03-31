@@ -1,5 +1,3 @@
 export default function hasValuesFromArray(set, array) {
-    hasValuesFromArray(Array) 
-    set.has(array);
-    return 1;
+    return array.every((arrays) => set.has(arrays));
 }
