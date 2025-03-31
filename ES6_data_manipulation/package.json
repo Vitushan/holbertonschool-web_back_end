@@ -1,6 +1,7 @@
 {
   "name": "holbertonschool-web_back_end",
   "version": "1.0.0",
+  "type": "module",
   "description": "read me now",
   "main": "index.js",
   "scripts": {
@@ -8,6 +9,7 @@
     "dev": "nodemon server.js",
     "run-0-main": "node 0-main.js"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vitushan/holbertonschool-web_back_end.git"
@@ -20,3 +22,4 @@
   },
   "homepage": "https://github.com/Vitushan/holbertonschool-web_back_end#readme"
 }
+
