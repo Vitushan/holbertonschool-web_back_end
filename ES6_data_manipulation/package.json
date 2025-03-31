@@ -1,19 +1,22 @@
 {
-    "scripts": {
-      "lint": "./node_modules/.bin/eslint",
-      "check-lint": "lint [0-9]*.js",
-      "dev": "npx babel-node",
-      "test": "jest",
-      "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
-    },
-    "devDependencies": {
-      "@babel/core": "^7.6.0",
-      "@babel/node": "^7.8.0",
-      "@babel/preset-env": "^7.6.0",
-      "eslint": "^6.8.0",
-      "eslint-config-airbnb-base": "^14.0.0",
-      "eslint-plugin-import": "^2.18.2",
-      "eslint-plugin-jest": "^22.17.0",
-      "jest": "^24.9.0"
-    }
+  "name": "holbertonschool-web_back_end",
+  "version": "1.0.0",
+  "description": "read me now",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "run-0-main": "node 0-main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitushan/holbertonschool-web_back_end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitushan/holbertonschool-web_back_end/issues"
+  },
+  "homepage": "https://github.com/Vitushan/holbertonschool-web_back_end#readme"
 }
