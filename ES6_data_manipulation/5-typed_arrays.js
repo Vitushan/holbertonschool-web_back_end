@@ -10,3 +10,4 @@ export default function createInt8TypedArray(length, position, value) {
   const buffer = new ArrayBuffer(8);
   const view = new Int8Array(buffer);
 }
+return buffer;
