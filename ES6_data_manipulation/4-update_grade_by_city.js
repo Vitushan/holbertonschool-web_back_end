@@ -21,9 +21,6 @@ export default function updateStudentGradeByCity(
         grade = 'N/A';
       }
 
-      return {
-        ...student,
-        grade,
-      };
+      return { ...student, grade };
     });
 }
