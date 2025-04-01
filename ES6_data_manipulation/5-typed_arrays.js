@@ -7,14 +7,13 @@ export default function createInt8TypedArray(length, position, value) {
     throw new Error('All arguments must be numbers');
   }
 
-  const buffer = new ArrayBuffer(length);
-  const view = new DataView(buffer);
-
   if (position < 0 || position >= length) {
     throw new Error('Position outside range');
   }
 
-  view.setInt8(position, value);
+  const buffer = new ArrayBuffer(length);
+  const view = new Int8Array(buffer);
+  Int8Array[position] = value;
 
-  return view;
+  return int8Array;
 }
