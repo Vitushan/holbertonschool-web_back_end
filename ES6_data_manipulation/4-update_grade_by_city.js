@@ -4,14 +4,20 @@ export default function updateStudentGradeByCity(students, location, newGrades) 
   }
 
   return students
-    .filter((student) => student.location === location)
+    .filter((student) => student.location === city)
     .map((student) => {
-      const gradeObject = newGrades.find(
-        (grade) => grade.studentId === student.id
-      );
+      const gradeObject = newGrades.find((grade) => grade.studentId === student.id);
+
+        let grade;
+        if (gradeObject) {
+          grade = gradeObject.grade;
+        } else {
+          grade = 'N/A';
+        }
+
       return {
         ...student,
-        grade: gradeObject ? gradeObject.grade : 'N/A',
+        grade,
       };
     });
-}
+  }
