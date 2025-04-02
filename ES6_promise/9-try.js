@@ -1,16 +1,14 @@
-import { queue } from "jquery";
-
 export default function guardrail(mathFunction) {
-    const queue = [];
+  const queue = [];
 
-    try {
-        const result = mathFunction();
-        queue.push(result);
-        catch (error){
-            queue.push(error.message);
-        }
-        finally {
-            queue.push('Guardrail was processed')
-        }
-    }
-    return queue;
+  try {
+    const result = mathFunction();
+    queue.push(result);
+  } catch (error) {
+    queue.push(error.message);
+  } finally {
+    queue.push('Guardrail was processed');
+  }
+
+  return queue;
+}
