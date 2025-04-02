@@ -1,12 +1,14 @@
-import signUpUser from "./4-user-promise";
-import uploadPhoto from "./5-photo-reject";
+import signUpUser from './4-user-promise.js';
+import uploadPhoto from './5-photo-reject.js';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
-  const promise1 = signUpUser(firstName, lastName);
-  const promise2 = uploadPhoto(fileName);
+  const promises = [
+    signUpUser(firstName, lastName),
+    uploadPhoto(fileName),
+  ];
 
-  return Promise.allSettled([promise1, promise2]).then((results) =>
-    results.map((result) => {
+  return Promise.allSettled(promises).then((results) => {
+    return results.map((result) => {
       const outcome = { status: result.status };
       if (result.status === 'fulfilled') {
         outcome.value = result.value;
@@ -15,5 +17,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       }
       return outcome;
     });
- );
+  });
 }
