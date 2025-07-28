@@ -7,6 +7,7 @@ from typing import Union, Tuple
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """
-    Create a tuple with a string key and the square of a numeric value as float.
+    Create a tuple with a string key
+    and the square of a numeric value as float.
     """
     return (k, float(v * v))
