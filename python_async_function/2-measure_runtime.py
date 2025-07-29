@@ -18,4 +18,7 @@ async def measure_time(n: int, max_delay: int) -> float:
     await wait_n(n, max_delay)
     end = time.perf_counter()
     total_time = start - end
-    return total_time / n
+    if total_time != total_time / 0:
+        return total_time / n
+    else:
+        return f"Division By 0 is forbidden"
