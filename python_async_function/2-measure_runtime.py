@@ -22,5 +22,6 @@ async def measure_time(n: int, max_delay: int) -> float:
         delay = total_time / n
     except ZeroDivisionError:
         print("Please note that division by zero is not permitted.")
+        return 0.0
     else:
         return delay
