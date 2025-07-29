@@ -19,8 +19,7 @@ async def measure_time(n: int, max_delay: int) -> float:
     end = time.perf_counter()
     total_time = start - end
     try:
-        real_time = total_time / n
+        total_time / n
     except ZeroDivisionError:
         print("Division By 0 is forbidden")
-    return real_time
-
+    return 
