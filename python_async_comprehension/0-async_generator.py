@@ -3,7 +3,7 @@
 this is a module for interpreting python3
 """
 
-from typing import Generator
+
 import asyncio
 import random
 
