@@ -4,12 +4,23 @@ this is a module for intepretting python3
 """
 
 import asyncio
-import random
+import time
 
-async def async_generator():
+
+async_comprehension = __import__('1-async_comprehension').async_comprehension
+
+
+async def measure_runtime():
     """
-    this is a async def generator
+    this is a async comprehension
+    measure and return total runtime
     """
-    for _ in range(10):
-        await asyncio.sleep(1)
-        yield random.randint(0, 10)
+    print(f"{time.strftime('%X')}")
+    await asyncio.gather(
+        async_comprehension(),
+        async_comprehension(),
+        async_comprehension(),
+        async_comprehension()
+    )
+    print(f"{time.strftime('%X')}")
+asyncio.run(measure_runtime())
