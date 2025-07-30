@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-this is a module for intepretting python3
+this is a module for interpreting python3
 """
 
-
+from typing import Generator
 import asyncio
 import random
 
