@@ -15,12 +15,14 @@ async def measure_runtime():
     this is a async comprehension
     measure and return total runtime
     """
-    print(f"{time.strftime('%X')}")
+    start = time.perf_counter()
+
     await asyncio.gather(
         async_comprehension(),
         async_comprehension(),
         async_comprehension(),
         async_comprehension()
     )
-    print(f"{time.strftime('%X')}")
-asyncio.run(measure_runtime())
+
+    end = time.perf_counter()
+    return end - start
