@@ -10,7 +10,7 @@ import asyncio
 async_generator = __import__('0-async_generator').async_generator
 
 
-async def async_comprehension() -> int:
+async def async_comprehension() -> float:
     """
     this is a async comprehension that collect 10
     random numbers
