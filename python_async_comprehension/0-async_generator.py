@@ -6,8 +6,6 @@ this is a module for intepretting python3
 
 import asyncio
 import random
-from typing import Generator
-
 
 
 async def async_generator():
