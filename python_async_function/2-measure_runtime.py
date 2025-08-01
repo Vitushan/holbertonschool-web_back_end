@@ -3,7 +3,6 @@
 this module for interpreting env python3
 """
 
-import asyncio
 import time
 
 
