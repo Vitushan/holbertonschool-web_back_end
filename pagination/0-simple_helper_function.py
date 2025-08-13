@@ -6,7 +6,8 @@ this is a module for interpreting Python3
 
 def index_range(page: int, page_size: int):
     """
-    Count the start and end pagination
+    Count the start and
+    the end indices for pagination
     """
     start_index = (page - 1) * page_size
     end_index = page * page_size
