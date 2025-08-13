@@ -8,6 +8,7 @@ import csv
 import math
 from typing import List, Dict
 
+
 def index_range(page: int, page_size: int):
     """
     The start and end indices for pagination
@@ -15,6 +16,7 @@ def index_range(page: int, page_size: int):
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return start_index, end_index
+
 
 class Server:
     """
@@ -35,16 +37,18 @@ class Server:
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
         return self.__dataset
-    
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Return the data for the requested page"""
-        assert isinstance(page, int) and page > 0, "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
+        assert isinstance(page, int) and page > 0, \
+            "page must be a positive integer"
+        assert isinstance(page_size, int) and page_size > 0, \
+            "page_size must be a positive integer"
 
         start, end = index_range(page, page_size)
         data = self.dataset()
         return data[start:end]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
         Return a hypermedia pagination dictionary
@@ -62,4 +66,3 @@ class Server:
             "total_pages": total_pages
         }
         return hypermedia
-    
