@@ -28,7 +28,7 @@ class Server:
     def indexed_dataset(self) -> Dict[int, List]:
         """
         Dataset indexed by starting position.
-        Deletion-resilient structure.
+        This helps to deal with deletions without missing data.
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
@@ -37,13 +37,15 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = None,
-                        page_size: int = 10) -> Dict[str, Any]:
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict[str, Any]:
         """
-        Return a deletion-resilient hypermedia pagination dict.
+        Return a dictionary containing:
+        - index: current start index
+        - next_index: index to query next
+        - page_size: length of the returned page
+        - data: the page of the dataset
+        Deletion-resilient: skips over removed dataset entries.
         """
-        if index is None:
-            index = 0
         assert isinstance(index, int) and index >= 0
         assert index < len(self.dataset())
 
@@ -51,14 +53,16 @@ class Server:
         data: List[List] = []
         current_index = index
 
-        while len(data) < page_size and current_index < len(self.dataset()) + page_size:
+        while len(data) < page_size and current_index < len(indexed_data):
             if current_index in indexed_data:
                 data.append(indexed_data[current_index])
             current_index += 1
 
+        next_index = current_index
+
         return {
             "index": index,
-            "next_index": current_index,
+            "next_index": next_index,
             "page_size": len(data),
             "data": data
         }
