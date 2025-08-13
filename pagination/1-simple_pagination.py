@@ -2,9 +2,10 @@
 # This is a module for interpreting Python3
 
 import csv
-from typing import List, Tuple
+from typing import List
 
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
+
+def index_range(page: int, page_size: int):
     """
     Compute the start and end indices for pagination.
     """
@@ -31,7 +32,7 @@ class Server:
             with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
-            self.__dataset = dataset[1:]
+            self.__dataset = dataset[1:]  # remove header
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
