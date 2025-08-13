@@ -5,7 +5,7 @@ import csv
 from typing import List
 
 
-def index_range(page: int, page_size: int):
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     Compute the start and end indices for pagination.
     """
@@ -49,4 +49,3 @@ class Server:
         start, end = index_range(page, page_size)
         data = self.dataset()
         return data[start:end]
-
