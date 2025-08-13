@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 # This is a module for interpreting Python3
 
-
 import csv
-from typing import List
+from typing import List, Tuple
 
-
-def index_range(page: int, page_size: int):
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     Compute the start and end indices for pagination.
     """
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return start_index, end_index
+
 
 class Server:
     """
