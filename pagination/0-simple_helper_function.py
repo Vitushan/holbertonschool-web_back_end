@@ -4,7 +4,6 @@ this is a module for interpreting Python3
 """
 
 
-
 def  index_range(page: int, page_size: int):
     """
     Count the start and end pagination
