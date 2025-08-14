@@ -1,0 +1,2 @@
+//find for each
+db.school.find().forEach(printjson)
