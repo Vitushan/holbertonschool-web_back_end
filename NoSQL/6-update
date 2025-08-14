@@ -1,2 +1,2 @@
 //UpdateMany
-db.school.find({ name: "Holberton school" }).forEach(printjson)
+db.school.update({ name: "Holberton school" }).forEach(printjson)
