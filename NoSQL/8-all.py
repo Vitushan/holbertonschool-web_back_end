@@ -8,5 +8,5 @@ def list_all(mongo_collection):
     function list all
     """
     if mongo_collection is None:
-        retrun []
+        return []
     return list(mongo_collection.find())
