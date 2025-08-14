@@ -1,0 +1,2 @@
+//display the number
+print(db.school.count())
