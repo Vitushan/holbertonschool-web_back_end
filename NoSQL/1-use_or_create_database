@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-//CREATE database
+-- Create the database if it does not exist
 CREATE DATABASE IF NOT EXISTS my_db;
 
+-- Select the database
 USE my_db;
