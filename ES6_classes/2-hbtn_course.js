@@ -35,8 +35,10 @@ export default class HolbertonCourse {
     if (!Array.isArray(value)) {
       throw new TypeError('Students must be a array of Strings');
     }
-    if (typeof value === 'string') {
-      throw new TypeError('Students must be a array of Strings');
+    for (let i = 0; i < value.length; i++) {
+      if (typeof value[i] !== 'string') {
+        throw new TypeError('Students must be a array of Strings');
+      }
     }
     this._students = value;
   }
