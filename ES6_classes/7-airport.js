@@ -9,4 +9,8 @@ export default class Airport {
     this._name = name;
     this._code = code;
   }
+
+  message() {
+    return `${this._code}`;
+  }
 }
