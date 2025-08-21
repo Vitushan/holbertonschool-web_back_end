@@ -10,7 +10,7 @@ export default class Airport {
     this._code = code;
   }
 
-  message() {
+  toString() {
     return this._code;
   }
 }
