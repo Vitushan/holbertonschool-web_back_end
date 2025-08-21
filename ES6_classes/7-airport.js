@@ -11,6 +11,6 @@ export default class Airport {
   }
 
   message() {
-    return `${this._code}`;
+    return this._code;
   }
 }
