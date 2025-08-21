@@ -11,6 +11,6 @@ export default class Building {
   }
 
   evacuationWarningMessage() {
-    throw new TypeError('Class extending Building must override evacuationWarningMessage');
+    throw new TypeError(` ${this._sqft} Class extending Building must override evacuationWarningMessage`);
   }
 }
