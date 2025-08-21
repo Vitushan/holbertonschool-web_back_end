@@ -17,3 +17,4 @@ class SkyHighBuilding extends Building {
     return `Evacuate slowly the ${this._floors} floors`;
   }
 }
+SkyHighBuilding();
