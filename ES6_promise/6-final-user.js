@@ -1,4 +1,4 @@
-import { signupUser } from './4-user-promise'
+import { signUpUser } from './4-user-promise'
 import { uploadPhoto } from './5-photo-reject'
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
@@ -14,7 +14,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     throw new TypeError('fileName must be a string');
   }
   return Promise.allSettled([
-    signupUser(firstName, lastName),
+    signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ]);
 }
