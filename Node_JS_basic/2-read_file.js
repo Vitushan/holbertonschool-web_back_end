@@ -29,7 +29,7 @@ function countStudents(path) {
     for (const field in fields) {
       if (Object.hasOwn(fields, field)) {
         console.log(
-          `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`
+          `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`,
         );
       }
     }
