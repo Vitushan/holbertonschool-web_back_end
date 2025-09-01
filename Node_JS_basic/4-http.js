@@ -8,7 +8,7 @@ const app = http.createServer((request, response) => {
   response.end('Hello Holberton School!');
 });
 
-app.listen(12345, () => {
+app.listen(1245, () => {
   console.log('Server running on port 1245');
 });
 
