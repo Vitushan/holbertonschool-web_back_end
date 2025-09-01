@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 
-process.stdout.write('Welcome to Holberton School, what is your name?\n');
+const readline = require('readline');
 
-process.stdin.setEncoding('utf-8');
-
-process.stdin.on('data', (data) => {
-  const name = data.toString().trim();
-  process.stdout.write(`Your name is: ${name}\n`);
-  process.exit();
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
 });
 
-process.on('exit', () => {
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
+
+rl.on('line', (input) => {
+  process.stdout.write(`Your name is: ${input}\n`);
+  rl.close();
+});
+
+rl.on('close', () => {
   process.stdout.write('This important software is now closing\n');
 });
