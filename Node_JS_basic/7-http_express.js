@@ -17,7 +17,8 @@ app.get('/students', async (req, res) => {
     response += result;
     res.send(response);
   } catch (err) {
-    res.send(`This is the list of our students\n'${err.message}`);
+    response += err.message;
+    res.send(response);
   }
 });
 
