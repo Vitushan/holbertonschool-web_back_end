@@ -5,14 +5,11 @@ async function countStudents(path) {
     const data = await fs.readFile(path, 'utf8');
     const lines = data.split('\n').filter((line) => line.trim() !== '');
 
-    const header = lines.shift();
-
     const studentsByField = {};
     let totalStudents = 0;
 
     for (const line of lines) {
       const fields = line.split(',');
-      if (fields.length < 4) continue;
       const firstname = fields[0].trim();
       const field = fields[3].trim();
 
