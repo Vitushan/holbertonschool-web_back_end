@@ -16,7 +16,3 @@ rl.on('line', (input) => {
 rl.on('close', () => {
   process.stdout.write('This important software is now closing\n');
 });
-
-process.on('SIGINT', () => {
-  rl.close();
-});
