@@ -5,7 +5,6 @@ const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  terminal: false,
 });
 
 process.stdout.write('Welcome to Holberton School, what is your name?\n');
@@ -17,4 +16,8 @@ rl.on('line', (input) => {
 
 rl.on('close', () => {
   process.stdout.write('This important software is now closing\n');
+});
+
+process.on('SIGINT', () => {
+  rl.close();
 });
