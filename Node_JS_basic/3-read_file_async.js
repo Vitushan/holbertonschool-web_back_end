@@ -10,11 +10,11 @@ async function countStudents(path) {
 
     for (const line of lines) {
       const fields = line.split(',');
-      const firstname = fields[0].trim();
+      const firstName = fields[0].trim();
       const field = fields[3].trim();
 
       if (!studentsByField[field]) studentsByField[field] = [];
-      studentsByField[field].push(firstname);
+      studentsByField[field].push(firstName);
 
       totalStudents += 1;
     }
